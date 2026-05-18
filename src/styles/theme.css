@@ -1,0 +1,164 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* QueStack Dark Academic Brutalist Theme */
+  --background: #0A0A0F;
+  --background-secondary: #12121A;
+  --foreground: #E5E5E7;
+  --foreground-muted: #9494A0;
+  
+  /* Brand Colors */
+  --lime: #B8FF57;
+  --lime-foreground: #0A0A0F;
+  --indigo: #5271FF;
+  --indigo-foreground: #FFFFFF;
+  
+  /* Notification Colors */
+  --notif-answer: #5271FF;
+  --notif-upvote: #B8FF57;
+  --notif-achievement: #FFD700;
+  
+  /* Base spacing unit */
+  --spacing-unit: 4px;
+  
+  /* Fonts */
+  --font-heading: 'Syne', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-mono: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', 'Droid Sans Mono', 'Source Code Pro', monospace;
+  
+  /* Borders */
+  --border: #2A2A35;
+  --border-strong: #3A3A45;
+  
+  /* Base font size */
+  --font-size: 16px;
+  
+  /* Color aliases for compatibility */
+  --card: #12121A;
+  --card-foreground: #E5E5E7;
+  --popover: #12121A;
+  --popover-foreground: #E5E5E7;
+  --primary: #B8FF57;
+  --primary-foreground: #0A0A0F;
+  --secondary: #5271FF;
+  --secondary-foreground: #FFFFFF;
+  --muted: #2A2A35;
+  --muted-foreground: #9494A0;
+  --accent: #B8FF57;
+  --accent-foreground: #0A0A0F;
+  --destructive: #FF5757;
+  --destructive-foreground: #FFFFFF;
+  --input: #2A2A35;
+  --ring: #B8FF57;
+  --radius: 0px;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-background-secondary: var(--background-secondary);
+  --color-foreground: var(--foreground);
+  --color-foreground-muted: var(--foreground-muted);
+  --color-lime: var(--lime);
+  --color-lime-foreground: var(--lime-foreground);
+  --color-indigo: var(--indigo);
+  --color-indigo-foreground: var(--indigo-foreground);
+  --color-notif-answer: var(--notif-answer);
+  --color-notif-upvote: var(--notif-upvote);
+  --color-notif-achievement: var(--notif-achievement);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+    font-weight: 400;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    line-height: 1.1;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+  }
+
+  /* Noise texture */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.03;
+    z-index: 9999;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  }
+}
+
+/* Utility classes */
+.heading {
+  font-family: var(--font-heading);
+  font-weight: 800;
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
+
+.noise-texture {
+  position: relative;
+}
+
+.noise-texture::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.04;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
