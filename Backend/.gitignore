@@ -1,1 +1,3 @@
-MONGO_URI=mongodb+srv://Bhimanshu:Bhimanshu123@cluster0.wmarmpg.mongodb.net/questack?appName=Cluster0
+node_modules
+dist
+.env
