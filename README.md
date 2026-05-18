@@ -1,11 +1,13 @@
+# QueueStack
 
-  # Design QueStack UI
+## Design QueStack UI
 
-  This is a code bundle for Design QueStack UI. The original project is available at https://www.figma.com/design/mc5DiuVrTm5PAyzjFXqkhc/Design-QueStack-UI.
+This is a code bundle for Design QueStack UI. The original project is available at:
+https://www.figma.com/design/mc5DiuVrTm5PAyzjFXqkhc/Design-QueStack-UI
 
-  ## Running the code
+## Running the code
 
-  Run `npm i` to install the dependencies.
+Run:
 
-  Run `npm run dev` to start the development server.
-  
+```bash
+npm i
